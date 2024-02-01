@@ -21,7 +21,7 @@ export default function Offer(){
         <>
         <S.Container>
             <span>Conheça nossas</span>
-            <h2>ofertas</h2>
+            <h2>ofertaas</h2>
 
             <S.CtnCard>
             {card
