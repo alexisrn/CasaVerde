@@ -1,9 +1,13 @@
+import { useEffect, useState } from 'react';
 import Newsletter from '../Newsletter';
 import { vector } from '../icons';
 import Header from '../template/Header';
 import * as S from './styles';
 
 export default function FirtsBanner() {
+
+ 
+
   return (
     <>
       <S.Container>

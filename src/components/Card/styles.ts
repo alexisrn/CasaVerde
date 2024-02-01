@@ -32,6 +32,7 @@ h2{
 div{
     display: flex;
     flex-direction: column;
+    font-size: 20px;
 }
 `
 

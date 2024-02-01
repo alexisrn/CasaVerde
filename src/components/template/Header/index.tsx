@@ -1,11 +1,29 @@
 import { IconLogo } from '@/components/icons';
 import * as S from './styles';
 import MenuItem from '@/components/MenuItem';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
+ 
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+     useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Remova o listener de rolagem ao desmontar o componente
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <S.Container>
+      <S.Container scrollPosition={scrollPosition} >
+      <S.Content>
         <S.Image>{IconLogo}</S.Image>
 
         <S.Menu>
@@ -19,6 +37,7 @@ export default function Header() {
                 /
         <MenuItem title="Meu carrinho" url="/" />
         </S.Menu>
+      </S.Content>
       </S.Container>
     </>
   );

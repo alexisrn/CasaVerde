@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 width: 80%;
-height: 300px;
+height: 100%;
 
-margin-top: 50px;
+margin:80px 0;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -26,12 +26,10 @@ h2{
 
 export const CtnCard = styled.div`
 width: 100%;
-height: 100%;
-
+height: 300px;
 display: flex;
 flex-wrap: wrap;
 align-items: center;
 justify-content: center;
 gap:40px;
-
 `
