@@ -16,7 +16,7 @@ export default function Offer(props:any){
           ? props.plants.map((item:any, i:any) => {
               return (
                 <>
-               <Card key={i} name={item.name} price={item.price} image={item.image} />
+               <Card key={i} name={item.name} price={item.preco} image={item.image} />
                 </>
               );
             })
