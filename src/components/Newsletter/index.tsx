@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 
 export default function Newsletter() {
-  
+  const notify = () => toast(`E-mail encaminhado para: ${email}`)
   const [email, setEmail] = useState('')
 
   const showAlert = (e:any) => {
@@ -16,7 +16,7 @@ export default function Newsletter() {
     if(email === ''){
       return toast.error('Preencha os campos')
     } else{
-      alert('Você digitou: ' + email);
+      notify()
     }
   };
 

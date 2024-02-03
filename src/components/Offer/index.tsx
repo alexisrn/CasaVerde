@@ -1,22 +1,9 @@
-import { useEffect, useState } from 'react';
 import * as S from './styles'
 import Card from '../Card';
 
-export default function Offer(){
+export default function Offer(props:any){
 
     
-    const [card, setCard] = useState([]);
-
-    const getCards = async () => {
-        fetch(`https://casaverde-ten.vercel.app/api/plants`)
-          .then((res) => res.json())
-          .then((json) => setCard(json));
-      };
-
-    useEffect(() => {
-        getCards()
-    },[])
-
     return(
         <>
         <S.Container>
@@ -25,8 +12,8 @@ export default function Offer(){
 
               <div>
             <S.CtnCard>
-            {card
-          ? card.map((item:any, i:any) => {
+            {props.plants
+          ? props.plants.map((item:any, i:any) => {
               return (
                 <>
                <Card key={i} name={item.name} price={item.price} image={item.image} />
