@@ -56,10 +56,10 @@ export default function Newsletter() {
      <S.Input type='email'
      value={email}
      onChange={handleEmailChange}
+     placeholder='Digite seu e-mail'
      />
      <S.Btn 
-  
-     disabled={!isEmailValid || isSubmitting} 
+       disabled={!isEmailValid || isSubmitting} 
      type='submit'>
       Assinar newsletter
       
