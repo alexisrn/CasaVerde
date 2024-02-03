@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-width: 80%;
+width: 100%;
 height: 100%;
-
 margin:80px 0;
 display: flex;
-flex-direction: column;
 align-items: center;
+flex-direction: column;
+
+
 
 span{
     opacity: 0.5;
@@ -32,4 +33,6 @@ flex-wrap: wrap;
 align-items: center;
 justify-content: center;
 gap:40px;
+
+
 `

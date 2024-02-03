@@ -14,7 +14,6 @@ export default function Header() {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Remova o listener de rolagem ao desmontar o componente
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };

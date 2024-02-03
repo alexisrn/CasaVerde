@@ -10,8 +10,8 @@ export default function Home() {
       <S.Container>
       <FirtsBanner />
       <MyPlant />
-      <Offer />
       </S.Container>
+      <Offer />
     </>
   );
 }

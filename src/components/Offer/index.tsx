@@ -8,7 +8,7 @@ export default function Offer(){
     const [card, setCard] = useState([]);
 
     const getCards = async () => {
-        fetch(`https://casaverde-ten.vercel.app/api/plants`)
+        fetch(`http://localhost:3000/api/plants`)
           .then((res) => res.json())
           .then((json) => setCard(json));
       };
@@ -23,6 +23,7 @@ export default function Offer(){
             <span>Conheça nossas</span>
             <h2>ofertas</h2>
 
+              <div>
             <S.CtnCard>
             {card
           ? card.map((item:any, i:any) => {
@@ -34,6 +35,7 @@ export default function Offer(){
             })
           : null}
             </S.CtnCard>
+          </div>
 
         </S.Container>
         </>
