@@ -8,10 +8,25 @@ import 'react-toastify/dist/ReactToastify.css'
 export default function Newsletter() {
   const notify = () => toast(`E-mail encaminhado para: ${email}`)
   const [email, setEmail] = useState('')
+  const [isEmailValid, setIsEmailValid] = useState(false);
+  const [emailError, setEmailError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleEmailChange = (e) => {
+    const newEmail = e.target.value;
+    setEmail(newEmail);
+
+    // Expressão regular para validar o formato do e-mail
+    const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newEmail.trim());
+
+    // Atualizar estado de erro e validade do e-mail
+    setEmailError(isValid ? '' : 'Por favor, digite um e-mail válido.');
+    setIsEmailValid(isValid);
+  };
 
   const handleSubmit = async (event:any) => {
     event.preventDefault();
-
+    setIsSubmitting(true);
     try {
       const response = await fetch('/api/sendEmail', {
         method: 'POST',
@@ -24,6 +39,7 @@ export default function Newsletter() {
       if (response.ok) {
         notify();
         setEmail('');
+        setIsEmailValid(false);
       } else {
         return toast.error('Erro ao enviar o e-mail.')
       }
@@ -39,9 +55,15 @@ export default function Newsletter() {
      <S.Icon><span>{letter}</span></S.Icon> 
      <S.Input type='email'
      value={email}
-     onChange={(e) => setEmail(e.target.value)}
+     onChange={handleEmailChange}
      />
-     <S.Btn type='submit'>Assinar newsletter</S.Btn>
+     <S.Btn 
+  
+     disabled={!isEmailValid || isSubmitting} 
+     type='submit'>
+      Assinar newsletter
+      
+    </S.Btn>
      
       </S.Container>
     </>

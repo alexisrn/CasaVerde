@@ -37,14 +37,12 @@ opacity: 0.3;
 `
 
 export const Btn = styled.button`
-background-color: #ffcb47;
+background-color: ${({ disabled }) => (disabled ? '#ccc' : '#ffcb47')};
 color: #fff;
 width: 45%;
 height: 100%;
 border: none;
 font-size: 16px;
-cursor: pointer;
- &:hover{
-    background-color: #f9ba18;
- }
+cursor:  ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+
 `
