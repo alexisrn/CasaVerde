@@ -12,7 +12,7 @@ export default function Newsletter() {
   const [emailError, setEmailError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleEmailChange = (e) => {
+  const handleEmailChange = (e:any) => {
     const newEmail = e.target.value;
     setEmail(newEmail);
 
