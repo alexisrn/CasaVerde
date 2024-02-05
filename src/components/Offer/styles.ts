@@ -25,6 +25,16 @@ h2{
 }
 `
 
+export const CtnBtn = styled.div`
+
+width: 100%;
+height: 100%;
+
+display: flex;
+justify-content: center;
+align-items: center;
+`
+
 export const CtnCard = styled.div`
 width: 100%;
 height: 300px;
@@ -33,6 +43,5 @@ flex-wrap: wrap;
 align-items: center;
 justify-content: center;
 gap:40px;
-
 
 `
