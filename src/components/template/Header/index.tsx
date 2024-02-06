@@ -3,10 +3,13 @@ import * as S from './styles';
 import MenuItem from '@/components/MenuItem';
 import { useEffect, useState } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Sidebard } from '../SideBar';
 
 export default function Header() {
- 
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [sidebar, setSidebar] = useState(false);
+
+  const showSidebard = () => setSidebar(!sidebar);
 
      useEffect(() => {
     const handleScroll = () => {
@@ -38,7 +41,12 @@ export default function Header() {
         <MenuItem title="Meu carrinho" url="/" />
         </S.Menu>
 
-        <S.HambMenu><GiHamburgerMenu /></S.HambMenu>
+        <S.HambMenu >
+          <GiHamburgerMenu onClick={showSidebard} />
+          
+          {sidebar && <Sidebard active={setSidebar} />}
+          
+          </S.HambMenu>
       </S.Content>
       </S.Container>
     </>
