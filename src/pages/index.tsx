@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     const getPlants = async () => {
       try{
-        const res = await fetch('http://localhost:3000/api/plants')
+        const res = await fetch('https://casaverde-ten.vercel.app/api/plants')
         const  data = await res.json();
 
         const dataFilter = data.filter((item:any) => item.ordem !== 0);
