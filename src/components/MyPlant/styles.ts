@@ -5,7 +5,7 @@ height: 440px;
 width: 75%;
 background-color: #fff;
 box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-z-index: 9;
+z-index: 0;
 display: flex;
 @media (max-width:400px){
     margin-top: 50px;
