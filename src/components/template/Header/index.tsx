@@ -1,7 +1,8 @@
-import { IconLogo } from '@/components/icons';
+import { IconLogo, hambMenu } from '@/components/icons';
 import * as S from './styles';
 import MenuItem from '@/components/MenuItem';
 import { useEffect, useState } from 'react';
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Header() {
  
@@ -36,6 +37,8 @@ export default function Header() {
                 /
         <MenuItem title="Meu carrinho" url="/" />
         </S.Menu>
+
+        <S.HambMenu><GiHamburgerMenu /></S.HambMenu>
       </S.Content>
       </S.Container>
     </>

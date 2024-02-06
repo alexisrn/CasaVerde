@@ -22,6 +22,10 @@ export const Input = styled.input`
 width: 150px;
 height: 40px;
 
+@media (max-width: 810px){
+  width: 80px;
+}
+
 align-items: center;
   background-color: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.1);

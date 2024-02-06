@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.form`
-width: 585px;
+width: 100%;
+min-width: 250px;
 height: 75px;
 background-color: #FFF;
 box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.06);
 
 display: flex;
 align-items: center;
+
 `
 
 export const Icon = styled.div`
@@ -34,6 +36,7 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 opacity: 0.3;
+
 `
 
 export const Btn = styled.button`
@@ -44,5 +47,7 @@ height: 100%;
 border: none;
 font-size: 16px;
 cursor:  ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
-
+@media (max-width: 400px){
+    padding:10px;
+}
 `

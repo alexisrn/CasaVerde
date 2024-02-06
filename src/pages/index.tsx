@@ -1,10 +1,9 @@
-import Header from '@/components/template/Header';
 import * as S from '../styles/home';
 import FirtsBanner from '@/components/FirstBanner';
 import MyPlant from '@/components/MyPlant';
 import Offer from '@/components/Offer';
 import { useEffect, useState } from 'react';
-import PlantList from '@/components/Plants';
+import Footer from '@/components/template/Footer';
 
 export default function Home() {
   
@@ -13,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     const getPlants = async () => {
       try{
-        const res = await fetch('https://casaverde-ten.vercel.app/api/plants')
+        const res = await fetch('http://localhost:3000/api/plants')
         const  data = await res.json();
 
         const dataFilter = data.filter((item:any) => item.ordem !== 0);
@@ -32,6 +31,7 @@ export default function Home() {
       <FirtsBanner />
       <MyPlant />
       <Offer plants={plants}/>
+      <Footer />
       </S.Container>
     </>
   );

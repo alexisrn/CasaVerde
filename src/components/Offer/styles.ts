@@ -37,7 +37,7 @@ align-items: center;
 
 export const CtnCard = styled.div`
 width: 100%;
-height: 300px;
+height: 100%;
 display: flex;
 flex-wrap: wrap;
 align-items: center;

@@ -53,6 +53,8 @@ export default function handler(
         "price":32.2,
         "image": "/images/datura.png",
       },
+      
+
 
   
    ]

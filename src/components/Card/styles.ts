@@ -8,6 +8,10 @@ background-color: white;
 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 display: flex;
+
+@media (max-width: 400px){
+    width: 300px;
+}
 `
 
 export const Image = styled.div`
@@ -34,7 +38,14 @@ div{
     flex-direction: column;
     font-size: 20px;
 }
+
+@media (max-width: 400px){
+    h2{
+        font-size: 28px;
+    }
+}
 `
+
 
 export const Price = styled.p`
 font-size: 16px;

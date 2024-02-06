@@ -11,6 +11,20 @@ align-items: center;
 justify-content: space-between;
 width: 80%;
 height: 100%;
+
+button{
+font-size: 30px;
+background-color: #FFFFFF;
+}
+
+`
+
+export const HambMenu = styled.div`
+font-size: 25px;
+@media (min-width: 600px){
+display: none;
+}
+
 `
 
 export const Container = styled.header<HeaderProps>`
@@ -30,6 +44,10 @@ transition: background-color 0.5s ease, position 0.5s ease;
 display: flex;
 justify-content: center;
 align-items: center;
+
+@media (max-width:430px){
+  width: 110%;
+}
 `
 
 export const Image = styled.div`
@@ -38,4 +56,8 @@ export const Image = styled.div`
 
 export const Menu = styled.ul`
 display:flex;
+
+@media (max-width: 600px){
+  display: none;
+}
 `
