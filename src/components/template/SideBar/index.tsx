@@ -19,11 +19,11 @@ export const Sidebard = ( {active}:any) => {
           <S.Logo >{IconLogo}</S.Logo>
 
             <S.List>
-            <MenuItem title="Como fazer" url="/"/>
-            <MenuItem title="Ofertas" url="/"/>
-            <MenuItem title="Depoimentos" url="/"/>
-            <MenuItem title="Videos" url="/"/>
-            <MenuItem title="Meu carrinho" url="/"/>
+            <MenuItem onClick={closeSidebar} title="Como fazer" url="/"/>
+            <MenuItem  onClick={closeSidebar} title="Ofertas" url="/"/>
+            <MenuItem onClick={closeSidebar} title="Depoimentos" url="/"/>
+            <MenuItem onClick={closeSidebar} title="Videos" url="/"/>
+            <MenuItem onClick={closeSidebar} title="Meu carrinho" url="/"/>
             </S.List>
             
           </S.MenuList>
