@@ -6,10 +6,15 @@ import {RiServiceLine} from 'react-icons/ri'
 import MenuItem from '@/components/MenuItem';
 import { IconLogo } from '@/components/icons';
 
+
+
 export const Sidebard = ( {active}:any) => {
     const closeSidebar = () => {
         active(false)
     }
+
+
+  
   return (
     < >
         <S.Container sidebar={active}>

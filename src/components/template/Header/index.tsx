@@ -11,6 +11,28 @@ export default function Header() {
 
   const showSidebard = () => setSidebar(!sidebar);
 
+  useEffect(() => {
+    const handleScrollLock = () => {
+      if (sidebar) {
+        // Desativar o scroll quando o aside estiver aberto
+        document.body.style.overflow = 'hidden';
+      } else {
+        // Habilitar o scroll quando o aside estiver fechado
+        setTimeout(() => {
+          document.body.style.overflow = 'auto';
+        }, 200); 
+      }
+    };
+
+    // Adicionar o listener quando o componente montar
+    window.addEventListener('scroll', handleScrollLock);
+    // Remover o listener quando o componente desmontar
+    return () => {
+      window.removeEventListener('scroll', handleScrollLock);
+    };
+  }, [sidebar]);
+
+
      useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
